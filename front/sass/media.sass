@@ -1,0 +1,56 @@
+@media screen and (min-width: 375px)
+  .payment
+    &__text_center
+      &:before, &:after
+        width: 100px
+  .visible
+    left: 25%
+  
+@media screen and (min-width: 768px)
+  .payment
+    &__text_center
+      &:before, &:after
+        width: 150px
+  .visible
+    left: 28%
+  
+@media screen and (min-width: 1000px)
+  header
+    max-width: 870px
+    margin: 0 auto
+  .nav
+    max-width: 850px
+    justify-content: end
+    position: relative
+    margin-bottom: 20px
+    &__lang
+      &_en
+        display: block
+        color: #B0B4BE
+        margin-right: 16px
+    &__text
+      position: absolute
+      left: 15px
+      top: 45px
+    &__arrow
+      position: absolute
+      left: -10px
+      top: 55px
+  main
+    display: flex 
+    justify-content: center
+    max-width: none
+  .payment
+    text-align: left
+    margin: 50px 32px 0 0
+    &__title
+      font: 32px/40px $font-inter-semb
+    &__subtitle
+      font: 16px/24px $font-inter-med
+  .order
+    max-height: 270px
+    padding: 32px
+    margin-bottom: 0
+  footer
+    padding-bottom: 30px
+  

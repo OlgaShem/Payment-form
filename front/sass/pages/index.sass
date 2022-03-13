@@ -1,0 +1,198 @@
+$black: #000
+$grey: #363A43
+$light-grey: #666C7B
+$green: #028837
+$green-hover: #05b37c
+$white: #ffff
+
+$font-inter: 'Inter-Regular', sans-serif
+$font-inter-med: 'Inter-Medium', sans-serif
+$font-inter-semb: 'Inter-SemiBold', sans-serif
+
+body 
+  font-family: $font-inter
+  color: $grey
+  display: flex
+  flex-direction: column
+.wrap
+  flex: 1 0 auto
+  padding: 20px 16px
+.nav
+  display: flex
+  justify-content: space-between
+  font: 18px/32px $font-inter-semb
+  &__lang 
+    font: 14px/24px $font-inter-med
+    display: flex
+    &_ua
+      color: #363A43
+    &_en
+      display: none
+main
+  display: block
+  margin: 0 auto
+  max-width: 420px
+.payment
+  max-width: 420px
+  text-align: center
+  margin: 16px 0 32px
+  &__title
+    font: 24px/32px $font-inter-semb
+  &__subtitle
+    font: 14px/20px $font-inter-med
+  &__divider
+    padding: 24px 0 16px 0
+  &__text
+    font: 12px/16px $font-inter
+    color: $light-grey
+    text-align: left
+    padding: 12px 16px
+    margin-top: 8px
+    border: 1px solid #E4E6EC
+    border-radius: 6px
+    &_center
+      font: 14px/24px $font-inter
+      text-align: center
+      position: relative
+      padding: 0
+      border: 0
+      &:before, &:after
+        content: ''
+        position: absolute
+        top: 12px
+        width: 80px
+        height: 1px
+        background: #E4E6EC
+      &::before
+        left: 0
+      &:after
+        right: 0
+    span
+      font: 12px/16px $font-inter-med
+.hidden
+  opacity: 0
+  animation: hidden 0.6s linear
+  transform: translateY(0%)
+  overflow: hidden
+  @keyframes hidden 
+    0% 
+      opacity: 1
+      transform: translateY(0%)
+    100% 
+      opacity: 0
+      transform: translateY(-30%)
+.visible
+  animation: visible 0.8s linear
+  transform: translateY(0%)
+  position: absolute
+  top: 10px
+  left: 20%
+  @keyframes visible
+    0% 
+      opacity: 0
+      transform: translateY(50%)
+    100% 
+      opacity: 1
+      transform: translateY(0%)
+.order
+  max-width: 420px
+  background:#F7F7F9
+  color: #363A43
+  max-height: 245px
+  padding: 12px 16px
+  border-radius: 8px
+  margin-bottom: 35px
+  &__block
+    border-bottom: 1px solid #E0E2EA
+    margin-bottom: 16px
+    padding-bottom: 16px
+  &__title
+    font: 18px/24px $font-inter-semb
+    padding-bottom: 24px
+  &__text
+    font: 14px/20px $font-inter-med
+    &_small
+      font: 12px/16px $font-inter
+      color: #797E8B
+  &__price
+    font: 16px/24px $font-inter-semb
+    text-align: right
+button
+  border: none
+  width: 100%
+  cursor: pointer
+  overflow: hidden
+  height: 44px
+  border-radius: 6px
+input
+  height: 44px
+  border-radius: 6px
+.apple
+  background: $black
+.payment
+  &__button
+    background: $green
+    color: $white
+    position: relative
+    font: 16px/24px $font-inter
+    &:hover
+      background: #029C3F
+    &:active
+      background: #02742F
+    &_apple
+      background: $black
+      margin-top: 24px
+.payment-form 
+  position: relative
+  text-align: left
+  &__block
+    display: flex
+  &__field
+    border: 1px solid #C7C9D1
+    width: 100%
+    margin-bottom: 12px
+  &__icon
+    position: absolute
+    right: 13px
+    bottom: 25px
+  &__label
+    color: $light-grey
+    font: 12px/20px $font-inter
+  &__date
+    flex: 1
+    margin-right: 8px
+  &__cvc
+    flex: 1
+    position: relative
+.payment-process 
+  display: none
+  align-items: center
+  &__loader 
+    border: 2px solid #7cb894
+    border-radius: 50%
+    border-top: 2px solid $white
+    width: 20px
+    height: 20px
+    margin-right: 12px
+    -webkit-animation: spin 1.6s linear infinite;
+    animation: spin 1.6s linear 
+    @keyframes spin 
+      0% 
+        transform: rotate(0deg)
+      100% 
+        transform: rotate(360deg)
+  &__check
+    display: none
+    width: 20px
+    height: 20px
+    background: url("../img/checkmark.svg") no-repeat 0 0/contain
+    margin-right: 12px
+footer
+  display: flex
+  justify-content: center
+  font: 14px/20px $font-inter-med
+  flex-shrink: 0
+  padding-bottom: 40px
+  p 
+    margin-right: 4px
+
